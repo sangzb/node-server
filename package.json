@@ -1,0 +1,33 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "node http server (koa first)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "4.4.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangzb/node-server.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "koa"
+  ],
+  "author": "sangzb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangzb/node-server/issues"
+  },
+  "homepage": "https://github.com/sangzb/node-server#readme",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-session": "^3.3.1",
+    "mysql": "^2.11.1"
+  }
+}
