@@ -1,5 +1,5 @@
-var C = require('./constantize');
+var constantize = require('./constantize');
 
 module.exports = {
-  C: C
-}
+  C: constantize
+};
