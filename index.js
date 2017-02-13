@@ -5,7 +5,6 @@ var promise = require('promise');
 
 var http = require('http');
 var koa = require('koa');
-var session = require('koa-session');
 var  app = koa();
 
 http.createServer(app.callback()).listen(C('APP_PORT'));
