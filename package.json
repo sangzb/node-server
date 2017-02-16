@@ -26,8 +26,12 @@
   },
   "homepage": "https://github.com/sangzb/node-server#readme",
   "dependencies": {
-    "koa": "^1.2.0",
-    "koa-session": "^3.3.1",
+    "koa": "^1.2.5",
+    "koa-better-body": "^3.0.2",
+    "koa-body": "^1.6.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^5.4.0",
+    "koa-session": "^3.4.0",
     "mysql": "mysqljs/mysql",
     "promise": "^7.1.1"
   }
