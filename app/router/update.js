@@ -4,25 +4,34 @@ var path = require('path');
 module.exports = function(router, koaBody) {
   return router.post('/upload', koaBody, function *(next) {
     if (this.request.method === 'POST') {
-      var demoFile = path.join('/usr/www/images/', 'demo.jpg');
-      var file    = this.request.body.files.file,
-        demoSrc = 'http://' + path.join(this.req.headers.host, `/images/demo.jpg?${Date.now()}`);
+      var file    = this.request.body.files.file;
 
-      this.body = yield new Promise((resolve, reject) => {
-        fs
-          .createReadStream(file.path)
-          .pipe(fs.createWriteStream(demoFile))
-          .on('finish', function () {
-            resolve({
+      this.body = yield writeImage(this.req, file);
+      yield next;
+    }
+  });
+};
+
+var writeImage = function(request, file) {
+  return new Promise((resolve, reject) => {
+    try{
+      fs.createReadStream(file.path)
+        .pipe(fs.createWriteStream(path.join(__dirname, file.name)))
+        .on('finish', () => {
+          resolve(
+            {
               mtime: file.mtime,
               name : file.name,
               size : file.size,
               type : file.type,
-              src  : demoSrc
-            });
-          });
+              src  : 'http://' + path.join(request.headers.host, `/images/${file.name}?${Date.now()}`)
+            }
+          )
+        })
+    }catch(e) {
+      reject({
+        error: e
       });
-      yield next;
     }
-  });
+  })
 };
