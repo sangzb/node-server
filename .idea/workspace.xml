@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12b4c02c-f036-438d-824a-7ad4c06c9d26" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router/update.js" afterPath="$PROJECT_DIR$/app/router/update.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/constantize.js" afterPath="$PROJECT_DIR$/app/utils/constantize.js" />
     </list>
     <ignored path="node-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +49,8 @@
       <file leaf-file-name="update.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/router/update.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="400">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -302,12 +300,12 @@
       <workItem from="1486970463853" duration="2341000" />
       <workItem from="1487131296764" duration="5827000" />
       <workItem from="1487213734937" duration="8200000" />
-      <workItem from="1487298464866" duration="1011000" />
+      <workItem from="1487298464866" duration="1326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30034000" />
+    <option name="totallyTimeSpent" value="30349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1255" height="777" extended-state="6" />
@@ -703,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/router/update.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="400">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>

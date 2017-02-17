@@ -1,6 +1,9 @@
 var fs = require('fs');
 var path = require('path');
 
+//var wp = __dirname;
+var wp = '/var/www/html/images/'
+
 module.exports = function(router, koaBody) {
   return router.post('/upload', koaBody, function *(next) {
     if (this.request.method === 'POST') {
@@ -16,7 +19,7 @@ var writeImage = function(request, file) {
   return new Promise((resolve, reject) => {
     try{
       fs.createReadStream(file.path)
-        .pipe(fs.createWriteStream(path.join(__dirname, file.name)))
+        .pipe(fs.createWriteStream(path.join(wp, file.name)))
         .on('finish', () => {
           resolve(
             {
