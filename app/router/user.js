@@ -1,7 +1,22 @@
 var mysql = require('../mysql');
 
 module.exports = function(router, koaBody) {
-  return router.post('/login', koaBody, function *(next) {
-    this.body = this.request.body;
+  router.post('/login', koaBody, function *(next) {
+    var result = yield mysql.getUser();
+
+    console.log(result);
+    this.body = result;
   });
+  
+  router.get('/user', koaBody, function *(next) {
+    try {
+      var username = this.request.query ? this.request.query.userName : '';
+      var result = yield mysql.getUser(username);
+      this.body = { data: result, status: 200 }
+    }catch (e){
+      this.body = { data: [], status: 500 };
+    }
+  });
+  
+  return router;
 };

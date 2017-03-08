@@ -8,12 +8,23 @@ var connection = mysql.createConnection({
 });
 
 module.exports = {
-  getUser: function () {
+  getUser: function (userName) {
     return new Promise(function (resolve, reject) {
-      connection.query('select * from user', function (err, rows, fields) {
+      connection.query('select * from user where name= "' + userName + '"', function (err, rows, fields) {
         if (err) {
           reject(err);
         } else {
+          resolve(rows);
+        }
+      });
+    })
+  },
+  userLogin: function(user) {
+    return new Promise((resolve, reject) => {
+      connection.query(`select * from user where name=${user.userName}`, function(err, rows, fields) {
+        if (err) {
+          reject(err);
+        }else {
           resolve(rows);
         }
       });
