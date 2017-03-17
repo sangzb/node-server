@@ -2,8 +2,8 @@ var mysql = require('mysql');
 var promise = require('promise');
 var connection = mysql.createConnection({
   host     : '127.0.0.1',
-  user     : 'root',
-  password : 'rootdb',
+  user     : 'develop',
+  password : 'develop',
   database : 'develop'
 });
 
