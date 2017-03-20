@@ -17,6 +17,17 @@ module.exports = function(router, koaBody) {
       this.body = { data: [], status: 500 };
     }
   });
+
+  router.post('/user', koaBody, function *(next) {
+    try {
+      var username = this.request;
+      console.log(username);
+      //var result = yield mysql.registerUser(param);
+      //this.body = { data: result, status: 200 }
+    }catch (e){
+      this.body = { data: [], status: 500 };
+    }
+  });
   
   return router;
 };
