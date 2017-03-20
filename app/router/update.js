@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 
 //var wp = __dirname;
-var wp = '/var/www/html/images/';
+var wp = '/www/html/images/';
 
 module.exports = function(router, koaBody) {
   return router.post('/upload', koaBody, function *(next) {
