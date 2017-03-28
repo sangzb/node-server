@@ -1,8 +1,8 @@
 var fs = require('fs');
 var path = require('path');
 
-var wp = __dirname;
-//var wp = '/www/html/images/';
+//var wp = __dirname;
+var wp = '/www/upload/';
 
 module.exports = function(router, koaBody) {
   return router.post('/upload', koaBody, function *(next) {
@@ -27,7 +27,7 @@ var writeImage = function(request, file) {
               name : file.name,
               size : file.size,
               type : file.type,
-              src  : 'http://' + path.join(request.headers.host, `/images/${file.name}?${Date.now()}`)
+              src  : 'http://' + path.join(request.headers.host, `/upload/${file.name}?${Date.now()}`)
             }
           )
         })
