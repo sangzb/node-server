@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var utils = require('../uitls');
+var utils = require('../utils');
 
 var C = utils.C;
 
