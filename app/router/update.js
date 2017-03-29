@@ -1,5 +1,8 @@
 var fs = require('fs');
 var path = require('path');
+var utils = require('../uitls');
+
+var C = utils.C;
 
 //var wp = __dirname;
 var wp = '/www/upload/';
@@ -27,7 +30,7 @@ var writeImage = function(request, file) {
               name : file.name,
               size : file.size,
               type : file.type,
-              src  : 'http://' + path.join(request.headers.host, `/upload/${file.name}?${Date.now()}`)
+              src  : 'http://' + path.join(C('HOST_URI'), `/upload/${file.name}?${Date.now()}`)
             }
           )
         })
