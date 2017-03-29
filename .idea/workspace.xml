@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12b4c02c-f036-438d-824a-7ad4c06c9d26" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router/update.js" afterPath="$PROJECT_DIR$/app/router/update.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/constant/index.js" afterPath="$PROJECT_DIR$/app/constant/index.js" />
     </list>
     <ignored path="node-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/constant/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="80">
+              <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -99,9 +99,9 @@
         <option value="$PROJECT_DIR$/app/utils/index.js" />
         <option value="$PROJECT_DIR$/app/utils/mkdir.js" />
         <option value="$PROJECT_DIR$/app/router/user.js" />
-        <option value="$PROJECT_DIR$/app/constant/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/router/update.js" />
+        <option value="$PROJECT_DIR$/app/constant/index.js" />
       </list>
     </option>
   </component>
@@ -321,12 +321,12 @@
       <workItem from="1490178903956" duration="250000" />
       <workItem from="1490340313448" duration="1560000" />
       <workItem from="1490351954613" duration="1000" />
-      <workItem from="1490782473153" duration="1788000" />
+      <workItem from="1490782473153" duration="2072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51882000" />
+    <option name="totallyTimeSpent" value="52166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1255" height="777" extended-state="6" />
@@ -715,18 +715,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/constant/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mysql/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/constant/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
