@@ -10,6 +10,6 @@ module.exports = function(router, koaBody) {
     var result = yield mysql.getUser();
     response.body = result;
   }).get('/test/jsonp', koaBody, function *(){
-    this.body = 'test({"name", "test"})';
+    this.body = 'test({"name": "test"})';
   })
 };
