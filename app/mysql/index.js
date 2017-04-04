@@ -1,10 +1,10 @@
-var fs = require('fs');
-var path = require('path');
+let fs = require('fs');
+let path = require('path');
 
-var mysql = require('mysql');
-var promise = require('promise');
-var connection = mysql.createConnection({
-  host     : '127.0.0.1',
+let mysql = require('mysql');
+let promise = require('promise');
+let connection = mysql.createConnection({
+  host     : '45.77.22.206',
   user     : 'develop',
   password : 'develop',
   database : 'develop'

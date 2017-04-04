@@ -1,10 +1,10 @@
-var mysql = require('../mysql');
-var mkdirp = require('mkdirp');
-var path = require('path');
+let mysql = require('../mysql');
+let mkdirp = require('mkdirp');
+let path = require('path');
 
 module.exports = function(router, koaBody) {
   router.post('/login', koaBody, function *(next) {
-    var result = yield mysql.getUser();
+    let result = yield mysql.getUser();
 
     console.log(result);
     this.body = result;
@@ -12,19 +12,22 @@ module.exports = function(router, koaBody) {
   
   router.get('/user', koaBody, function *(next) {
     try {
-      var username = this.request.query ? this.request.query.userName : '';
-      var result = yield mysql.getUser(username);
+      let username = this.request.query ? this.request.query.userName : '';
+console.log(123)
+
+      console.log(username);
+      let result = yield mysql.getUser(username);
       this.body = { data: result, status: 200 }
     }catch (e){
-      this.body = { data: [], status: 500 };
+      this.body = e//{ data: [], status: 500 };
     }
   });
 
   router.post('/user', koaBody, function *(next) {
     try {
-      var username = this.request;
+      let username = this.request;
       console.log(username);
-      //var result = yield mysql.registerUser(param);
+      //let result = yield mysql.registerUser(param);
       //this.body = { data: result, status: 200 }
     }catch(e) {
       this.body = { data: [], status: 500 };
@@ -32,11 +35,11 @@ module.exports = function(router, koaBody) {
   });
 
   router.post('/register', koaBody, function *(next) {
-    var param = this.request.body;
+    let param = this.request.body;
     try {
-      var result = ''//yield mysql.userRegister({userName: param.userName, password: param.password});
+      let result = ''//yield mysql.userRegister({userName: param.userName, password: param.password});
       console.log(result,'==sdf=ghf=ds=dfghfd=sf=gh=fds=fgh=');
-      var dir = yield mkdirHelper(`/www/user/${param.userName}`);
+      let dir = yield mkdirHelper(`/www/user/${param.userName}`);
       console.log(dir, 'mkdir');
       this.body = result;
     }catch(e) {

@@ -1,16 +1,16 @@
-var fs = require('fs');
-var path = require('path');
-var utils = require('../utils');
+let fs = require('fs');
+let path = require('path');
+let utils = require('../utils');
 
-var C = utils.C;
+let C = utils.C;
 
-//var wp = __dirname;
-var wp = '/www/upload/';
+//let wp = __dirname;
+let wp = '/www/upload/';
 
 module.exports = function(router, koaBody) {
   return router.post('/upload', koaBody, function *(next) {
     if (this.request.method === 'POST') {
-      var file    = this.request.body.files.file;
+      let file    = this.request.body.files.file;
 
       this.body = yield writeImage(this.req, file);
       yield next;
@@ -18,7 +18,7 @@ module.exports = function(router, koaBody) {
   });
 };
 
-var writeImage = function(request, file) {
+let writeImage = function(request, file) {
   return new Promise((resolve, reject) => {
     try{
       fs.createReadStream(file.path)

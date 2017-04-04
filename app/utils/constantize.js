@@ -1,4 +1,4 @@
-var constants = require('../constant');
+let constants = require('../constant');
 
 module.exports = function(constant) {
   if (!constants.hasOwnProperty(constant))
