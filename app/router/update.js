@@ -8,12 +8,10 @@ let C = utils.C;
 let wp = '/www/upload/';
 
 module.exports = function(router, koaBody) {
-  return router.post('/upload', koaBody, function *(next) {
-    if (this.request.method === 'POST') {
-      let file    = this.request.body.files.file;
-
-      this.body = yield writeImage(this.req, file);
-      yield next;
+  return router.post('/upload', koaBody, async (ctx) => {
+    if (ctx.request.method === 'POST') {
+      let file = ctx.request.body.files.file;
+      ctx.body = await writeImage(ctx.req, file);
     }
   });
 };
